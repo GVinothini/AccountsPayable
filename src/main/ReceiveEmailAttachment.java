@@ -26,9 +26,6 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.naming.AuthenticationException;
 
-//import org.apache.commons.io.IOUtils;
-//import org.bouncycastle.math.ec.ECCurve.Config;
-
 public class ReceiveEmailAttachment {
 	Properties config;
 	static Address to;
