@@ -20,7 +20,7 @@ import org.apache.pdfbox.text.PDFTextStripperByArea;
 
 public class ReadInvoiceDetails {
 	
-	private Connection createConnection(Connection connection) throws SQLException{
+	public Connection createConnection(Connection connection) throws SQLException{
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
 		String username ="hr";
 		String password = "hr";
@@ -77,7 +77,7 @@ public class ReadInvoiceDetails {
 			listOfInvoiceNumbers = getInvoiceNumbers(statement, listOfInvoiceNumbers);
 			store.updateStatus(connection, listOfInvoiceNumbers);	//call updateStatus in ReceiveEmailAttachment
 
-		}catch(FileNotFoundException f){
+		}catch(FileNotFoundException e){
 			System.out.println("File not found to read data");
 		}catch(IOException e){
 			System.out.println("Exception in Input output operation");
