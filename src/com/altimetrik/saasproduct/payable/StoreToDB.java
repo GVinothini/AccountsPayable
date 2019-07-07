@@ -25,7 +25,7 @@ public class StoreToDB {
 		
 		while(!(scanner.next().equalsIgnoreCase("exit"))){
 					System.out.println("Enter invoice_number which you want to approve:  ");
-			String invoice_number = scanner.next();
+					String invoice_number = scanner.next();
 			
 			try {
 				String query = "update invoice_details set status = ? where invoice_number = ?";
@@ -88,6 +88,8 @@ public class StoreToDB {
 		    	    case "CREDIT":
 		    	    	list.add(pageDetails[++i]);
 			    	      break;
+			    	default:
+			    		break;
 		    	}			
 			}
 			
